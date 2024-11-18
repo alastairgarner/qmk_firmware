@@ -12,6 +12,8 @@
 #define TAPPING_TERM_PER_KEY
 // used for Tapping Term on thumb keys
 #define TAPPING_TERM_THUMB 125
+// Number of taps required to toggle a TT layer command
+#define TAPPING_TOGGLE 2
 
 // Set the COMBO_TERM so low that I won't type the keys one after each other during normal typing.
 // They would have be held together intentionally to trigger this.

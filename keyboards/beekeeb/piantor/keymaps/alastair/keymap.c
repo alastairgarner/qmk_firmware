@@ -25,12 +25,10 @@ combo_t key_combos[] = {
 // For _QWERTY layer
 #define OSM_SFT OSM(MOD_LSFT)
 #define OSL_SYM OSL(_SYM)
-#define OSL_NAV OSL(_NAV)
-#define MO_NAV MO(_NAV)
-#define MO_NUM MO(_NUM)
-#define TO_NAV TO(_NAV)
+#define LT_NUM LT(_NUM, KC_G)
 #define TO_NUM TO(_NUM)
 #define TO_BASE TO(_BASE)
+#define TT_NAV TT(_NAV)
 
 #define GUI_ENT GUI_T(KC_ENT)
 #define LOW_TAB LT(_LOWER, KC_TAB)
@@ -59,15 +57,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // Top right
         KC_Y, KC_U, KC_I, KC_O, KC_P, KC_BSPC,
         // Middle left
-        KC_TAB, MT(MOD_LSFT, KC_A), MT(MOD_LCTL, KC_S), MT(MOD_LALT, KC_D), MT(MOD_LGUI, KC_F), KC_G,
+        KC_TAB, MT(MOD_LSFT, KC_A), MT(MOD_LCTL, KC_S), MT(MOD_LALT, KC_D), MT(MOD_LGUI, KC_F), LT_NUM,
         // Middle right
         KC_H, KC_J, KC_K, KC_L, KC_QUOT, KC_ENT,
         // Bottom left
         KC_GRV, KC_Z, KC_X, KC_C, KC_V, KC_B,
         // Bottom right
-        KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, TO_NUM,
+        KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_TRNS,
         // Thumb left
-        MO_NUM, KC_LGUI, OSL_SYM,
+        TT_NAV, KC_LGUI, OSL_SYM,
         // Thumb right
         OSM_SFT, KC_SPC, KC_TRNS),
 
@@ -101,7 +99,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // Thumb left
         KC_TRNS, KC_TRNS, KC_TRNS,
         // Thumb right
-        KC_TRNS, KC_TRNS, KC_TRNS),
+        KC_TRNS, KC_TRNS, TO_BASE),
 
     /*
      * ┌───┬───┬───┬───┬───┬───┐       ┌───┬───┬───┬───┬───┬───┐
